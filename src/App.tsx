@@ -18,16 +18,26 @@ function App() {
 
       <main>
         <section className="hero">
-          <p className="hero-label">DESENVOLVIMENTO • TECNOLOGIA • SUPORTE</p>
+          <p className="hero-label">
+            TECNOLOGIA • SUPORTE • DESENVOLVIMENTO WEB
+          </p>
 
           <h2>
             Olá, eu sou <span>Marcos</span>.
           </h2>
 
           <p className="hero-description">
-            Profissional em transição para a área de tecnologia, com formação em
-            Ciência da Computação e experiência em suporte técnico.
+            Profissional em transição para a área de tecnologia, formado em
+            Ciência da Computação, com experiência em suporte técnico e
+            desenvolvimento de projetos web.
           </p>
+
+          <div className="hero-technologies">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
 
           <div className="hero-buttons">
             <a href="#projects">Ver meus projetos</a>

@@ -15,6 +15,9 @@ function ProjectCard({ project }: Props) {
       />
 
       <div className="project-card-content">
+        {project.id === 4 && (
+          <span className="project-featured">Projeto em destaque</span>
+        )}
         <h3>{project.title}</h3>
 
         <p>{project.description}</p>
@@ -25,15 +28,27 @@ function ProjectCard({ project }: Props) {
           ))}
         </ul>
 
-        {project.demoUrl && (
-          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-            Ver projeto
-          </a>
-        )}
+        <div className="project-links">
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link-primary"
+            >
+              Ver projeto
+            </a>
+          )}
 
-        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-          Ver no GitHub
-        </a>
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link-secondary"
+          >
+            Ver no GitHub
+          </a>
+        </div>
       </div>
     </article>
   );

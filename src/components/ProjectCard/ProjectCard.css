@@ -1,13 +1,13 @@
 .project-card {
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   background-color: var(--color-card);
-
   border: 1px solid var(--color-border);
   border-radius: 12px;
 
-  padding: 24px;
+  padding: 18px;
 
   transition:
     transform 0.2s ease,
@@ -32,6 +32,21 @@
   line-height: 1.6;
 }
 
+.project-featured {
+  align-self: flex-start;
+
+  margin-bottom: 10px;
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  background-color: #eff6ff;
+  color: var(--color-primary);
+
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
 .technology-list {
   display: flex;
   flex-wrap: wrap;
@@ -53,6 +68,45 @@
 
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.project-link-primary {
+  background-color: var(--color-primary);
+  color: white !important;
+}
+
+.project-link-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.project-link-secondary {
+  background-color: var(--color-card);
+  color: var(--color-primary) !important;
+}
+
+.project-link-secondary:hover {
+  background-color: #eff6ff;
 }
 
 .project-card a {
