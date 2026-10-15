@@ -107,6 +107,20 @@ function App() {
           </div>
         </section>
       </main>
+
+      <footer className="footer">
+        <p>
+          © {new Date().getFullYear()} Marcos Morais. Todos os direitos
+          reservados.
+        </p>
+        <a
+          href="https://github.com/Marcos-Paixao"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+      </footer>
     </>
   );
 }
