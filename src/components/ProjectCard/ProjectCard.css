@@ -3,48 +3,68 @@
   flex-direction: column;
   height: 100%;
 
-  background-color: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
+  background: rgba(8, 35, 69, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
+  border: 1px solid rgba(65, 220, 255, 0.35);
+  border-radius: 14px;
   padding: 18px;
 
+  box-shadow:
+    inset 0 0 18px rgba(34, 211, 238, 0.04),
+    0 0 15px rgba(34, 211, 238, 0.05);
+
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+  border-color: rgba(65, 220, 255, 0.8);
 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    inset 0 0 20px rgba(34, 211, 238, 0.08),
+    0 0 22px rgba(34, 211, 238, 0.15);
 }
 
 .project-card h3 {
   margin-bottom: 12px;
-
+  color: #f1f5f9;
   font-size: 1.3rem;
 }
 
 .project-card p {
-  color: var(--color-text-light);
-
+  color: #cbd5e1;
   line-height: 1.6;
+}
+
+.technology-list li {
+  padding: 5px 10px;
+  background-color: rgba(34, 167, 255, 0.12);
+  color: #67d9ff;
+  border: 1px solid rgba(65, 220, 255, 0.2);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .project-featured {
   align-self: flex-start;
-
   margin-bottom: 10px;
   padding: 5px 10px;
 
+  border: 1px solid rgba(65, 220, 255, 0.35);
   border-radius: 20px;
 
-  background-color: #eff6ff;
-  color: var(--color-primary);
+  background: rgba(34, 167, 255, 0.12);
+  color: #67d9ff;
 
   font-size: 0.75rem;
   font-weight: bold;
+  letter-spacing: 0.3px;
 }
 
 .technology-list {
@@ -56,20 +76,6 @@
 
   list-style: none;
 }
-
-.technology-list li {
-  padding: 5px 10px;
-
-  background-color: #eff6ff;
-
-  color: var(--color-primary);
-
-  border-radius: 20px;
-
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
 
 .project-links {
   display: flex;
@@ -92,21 +98,24 @@
 }
 
 .project-link-primary {
-  background-color: var(--color-primary);
-  color: white !important;
+  background: linear-gradient(135deg, #0879d9, #22a7ff);
+  color: #ffffff !important;
+  border-color: rgba(65, 220, 255, 0.6) !important;
 }
 
 .project-link-primary:hover {
-  background-color: var(--color-primary-dark);
+  background: linear-gradient(135deg, #1595f5, #43d9ff);
 }
 
 .project-link-secondary {
-  background-color: var(--color-card);
-  color: var(--color-primary) !important;
+  background: rgba(8, 35, 69, 0.5);
+  color: #8be5ff !important;
+  border-color: rgba(65, 220, 255, 0.35) !important;
 }
 
 .project-link-secondary:hover {
-  background-color: #eff6ff;
+  background: rgba(34, 167, 255, 0.12);
+  border-color: rgba(65, 220, 255, 0.8) !important;
 }
 
 .project-card a {
@@ -127,14 +136,6 @@
 
 .project-card-content .technology-list {
   margin: 8px 0;
-}
-
-.project-card {
-  padding: 18px;
-}
-
-.project-card-content a {
-  margin-top: auto;
 }
 
 .project-image {
